@@ -24,10 +24,18 @@ return {
 
             require('mason').setup({})
             require('mason-lspconfig').setup({
-                ensure_installed = { 'lua_ls', 'yamlls' },
-                handlers = {
-                    lsp_zero.default_setup,
+                ensure_installed = { 'lua_ls', 'yamlls', 'tsserver' },
+                automatic_installation = true
+            })
 
+            require('mason-lspconfig').setup_handlers {
+                lsp_zero.default_setup,
+
+                function (server_name)
+                    require('lspconfig')[server_name].setup({})
+                end,
+
+                ['lua_ls'] = function()
                     -- lua
                     require('lspconfig').lua_ls.setup({
                         on_init = function(client)
@@ -58,8 +66,10 @@ return {
                             end
                             return true
                         end
-                    }),
+                    })
+                end,
 
+                ['yamlls'] = function()
                     -- yaml
                     lsp_zero.configure('yamlls', {
                         settings = {
@@ -96,8 +106,8 @@ return {
                             },
                         },
                     })
-                },
-            })
+                end
+            }
         end
     }
 }

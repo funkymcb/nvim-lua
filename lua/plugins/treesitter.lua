@@ -2,7 +2,16 @@ return {
     'nvim-treesitter/nvim-treesitter',
     build = ':TSUpdate',
     opts = {
-        ensure_installed = { 'c', 'go', 'lua', 'rust', 'vim', 'vimdoc', 'query' },
+        ensure_installed = {
+            -- low level
+            'c', 'go', 'rust',
+            -- scripty
+            'lua', 'vim', 'vimdoc', 'query',
+            -- android
+            'java', 'kotlin',
+            -- web
+            'html', 'css', 'javascript', 'typescirpt'
+        },
         highlight = { enable = true },
         indent = { enable = true },
         rainbow = {
