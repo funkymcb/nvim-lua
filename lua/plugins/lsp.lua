@@ -11,9 +11,10 @@ return {
             local lsp_zero = require('lsp-zero')
 
             lsp_zero.on_attach(function(client, bufnr)
-                lsp_zero.default_keymaps({buffer = bufnr})
+                lsp_zero.default_keymaps({ buffer = bufnr })
+                lsp_zero.buffer_autoformat()
 
-                local opts = {buffer = bufnr, remap = false}
+                local opts = { buffer = bufnr, remap = false }
 
                 vim.keymap.set('n', '<space>d', vim.lsp.buf.hover, opts)
                 vim.keymap.set('n', '<space>gd', vim.lsp.buf.definition, opts)
@@ -31,7 +32,7 @@ return {
             require('mason-lspconfig').setup_handlers {
                 lsp_zero.default_setup,
 
-                function (server_name)
+                function(server_name)
                     require('lspconfig')[server_name].setup({})
                 end,
 
@@ -40,7 +41,7 @@ return {
                     require('lspconfig').lua_ls.setup({
                         on_init = function(client)
                             local path = client.workspace_folders[1].name
-                            if not vim.loop.fs_stat(path..'/.luarc.json') and not vim.loop.fs_stat(path..'/.luarc.jsonc') then
+                            if not vim.loop.fs_stat(path .. '/.luarc.json') and not vim.loop.fs_stat(path .. '/.luarc.jsonc') then
                                 client.config.settings = vim.tbl_deep_extend('force', client.config.settings, {
                                     Lua = {
                                         runtime = {
