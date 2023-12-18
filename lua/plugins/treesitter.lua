@@ -6,11 +6,13 @@ return {
             -- low level
             'c', 'go', 'rust',
             -- scripty
-            'lua', 'vim', 'vimdoc', 'query',
+            'bash', 'lua', 'vim', 'vimdoc', 'query',
             -- android
             'java', 'kotlin',
             -- web
-            'html', 'css', 'javascript', 'typescirpt'
+            'html', 'css', 'javascript', 'typescirpt',
+            -- devops
+            'terraform', 'yaml'
         },
         highlight = { enable = true },
         indent = { enable = true },
