@@ -27,5 +27,6 @@ return {
         })
         require("telescope").load_extension("noice")
         vim.keymap.set('n', '<leader>fn', ':Noice telescope<CR>')
+        vim.keymap.set('n', '<leader>cn', ':Noice dismiss<CR>')
     end
 }

@@ -1,6 +1,5 @@
 return {
     {
-        -- tokyo
         'folke/tokyonight.nvim',
         name = 'tokyo',
         config = function()

@@ -8,6 +8,8 @@ return {
                 'c', 'go', 'rust',
                 -- scripty
                 'bash', 'lua', 'vim', 'vimdoc', 'query',
+                -- rest
+                'http', 'json',
                 -- android
                 'java', 'kotlin',
                 -- web
