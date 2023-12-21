@@ -9,6 +9,7 @@ return {
     config = function()
         local lsp_zero = require('lsp-zero')
 
+        ---@diagnostic disable-next-line: unused-local
         lsp_zero.on_attach(function(client, bufnr)
             lsp_zero.default_keymaps({ buffer = bufnr })
             lsp_zero.buffer_autoformat()
@@ -17,6 +18,8 @@ return {
 
             vim.keymap.set('n', '<space>d', vim.lsp.buf.hover, opts)
             vim.keymap.set('n', '<space>gd', vim.lsp.buf.definition, opts)
+            vim.keymap.set('n', '<space>ca', vim.lsp.buf.code_action, opts)
+            vim.keymap.set('n', '<space>rf', vim.lsp.buf.rename, opts)
             vim.keymap.set('n', '<space>gi', vim.lsp.buf.implementation, opts)
             vim.keymap.set('n', '<space>n', vim.diagnostic.goto_next, opts)
             vim.keymap.set('n', '<space>p', vim.diagnostic.goto_prev, opts)
