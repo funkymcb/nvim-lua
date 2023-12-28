@@ -6,27 +6,26 @@ return {
         "rcarriga/nvim-notify",
     },
     config = function()
-        require('noice').setup({
+        require("noice").setup({
             cmdline = {
-                view = 'cmdline'
+                view = "cmdline",
             },
             lsp = {
                 signature = {
-                    enabled = false
+                    enabled = false,
                 },
                 override = {
                     ["vim.lsp.util.convert_input_to_markdown_lines"] = true,
                     ["vim.lsp.util.stylize_markdown"] = true,
                     ["cmp.entry.get_documentation"] = true,
-                }
+                },
             },
             presets = {
                 bottom_search = true,
             },
-
         })
         require("telescope").load_extension("noice")
-        vim.keymap.set('n', '<leader>fn', ':Noice telescope<CR>')
-        vim.keymap.set('n', '<leader>cn', ':Noice dismiss<CR>')
-    end
+        vim.keymap.set("n", "<leader>fn", ":Noice telescope<CR>")
+        vim.keymap.set("n", "<leader>cn", ":Noice dismiss<CR>")
+    end,
 }

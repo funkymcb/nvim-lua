@@ -1,21 +1,33 @@
 return {
-    'nvim-treesitter/nvim-treesitter',
-    build = ':TSUpdate',
+    "nvim-treesitter/nvim-treesitter",
+    build = ":TSUpdate",
     config = function()
-        require('nvim-treesitter.configs').setup({
+        require("nvim-treesitter.configs").setup({
+            auto_install = true,
             ensure_installed = {
                 -- low level
-                'c', 'go', 'rust',
+                "c",
+                "go",
+                "rust",
                 -- scripty
-                'bash', 'lua', 'vim', 'vimdoc', 'query',
+                "bash",
+                "lua",
+                "vim",
+                "vimdoc",
+                "query",
                 -- rest
-                'http', 'json',
+                "http",
+                "json",
                 -- android
-                'java', 'kotlin',
+                "java",
+                "kotlin",
                 -- web
-                'html', 'css', 'javascript',
+                "html",
+                "css",
+                "javascript",
                 -- devops
-                'terraform', 'yaml'
+                "terraform",
+                "yaml",
             },
             highlight = { enable = true },
             indent = { enable = true },
@@ -23,7 +35,7 @@ return {
                 enable = true,
                 extended_mode = true,
                 max_file_lines = nil,
-            }
+            },
         })
-    end
+    end,
 }

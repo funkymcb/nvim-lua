@@ -1,29 +1,29 @@
 return {
     {
-        'lewis6991/gitsigns.nvim',
-        name = 'gitsigns',
+        "lewis6991/gitsigns.nvim",
+        name = "gitsigns",
         opts = {
             signs = {
-                add = { text = '+' },
-                change = { text = '~' }
+                add = { text = "+" },
+                change = { text = "~" },
             },
             numhl = true,
             current_line_blame = true,
             current_line_blame_opts = {
                 delay = 0,
-                virt_text_pos = 'right_align',
-                virt_text_priority = 1000
-            }
-        }
+                virt_text_pos = "right_align",
+                virt_text_priority = 1000,
+            },
+        },
     },
     {
-        'kdheepak/lazygit.nvim',
-        name = 'lazygit',
+        "kdheepak/lazygit.nvim",
+        name = "lazygit",
         dependencies = {
-            'nvim-lua/plenary.nvim',
+            "nvim-lua/plenary.nvim",
         },
         config = function()
-            vim.keymap.set('n', '<leader>gs', ':LazyGit<CR>')
-        end
-    }
+            vim.keymap.set("n", "<leader>gs", ":LazyGit<CR>")
+        end,
+    },
 }
