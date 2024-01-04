@@ -38,8 +38,8 @@ return {
                 require("lspconfig")[server_name].setup({})
             end,
 
+            -- lua
             ["lua_ls"] = function()
-                -- lua
                 require("lspconfig").lua_ls.setup({
                     on_init = function(client)
                         local path = client.workspace_folders[1].name
@@ -68,9 +68,18 @@ return {
                 })
             end,
 
+            -- rust
+            ["rust_analyzer"] = function()
+                require("lspconfig").rust_analyzer.setup({
+                    check = {
+                        command = "clippy",
+                    },
+                })
+            end,
+
+            -- yaml
             ["yamlls"] = function()
-                -- yaml
-                lsp_zero.configure("yamlls", {
+                require("lspconfig").yamlls.setup({
                     settings = {
                         yaml = {
                             schemas = {

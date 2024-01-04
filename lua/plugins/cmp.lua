@@ -41,6 +41,10 @@ return {
                 { name = "path" },
                 { name = "buffer",  option = { keyword_lenth = 3 } },
             }),
+            window = {
+                completion = cmp.config.window.bordered(),
+                documentation = cmp.config.window.bordered(),
+            },
         })
         cmp.setup.cmdline({ "/", "?" }, {
             mapping = cmp.mapping.preset.cmdline(),
