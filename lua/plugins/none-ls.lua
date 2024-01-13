@@ -7,11 +7,8 @@ return {
         null_ls.setup({
             sources = {
                 -- formatting
-                null_ls.builtins.formatting.gofumpt,
-                null_ls.builtins.formatting.goimports,
                 null_ls.builtins.formatting.stylua,
-                null_ls.builtins.formatting.templ,
-                null_ls.builtins.formatting.yamlfmt,
+                null_ls.builtins.formatting.markdownlint,
 
                 -- diagnostics
                 null_ls.builtins.diagnostics.eslint_d,
