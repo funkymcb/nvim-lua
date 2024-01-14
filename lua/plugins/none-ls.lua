@@ -7,6 +7,7 @@ return {
 		null_ls.setup({
 			sources = {
 				-- formatting
+				-- null_ls.builtins.formatting.codespell, TODO fix ignore list like 'Bizness' (htb machine)
 				null_ls.builtins.formatting.gofumpt,
 				null_ls.builtins.formatting.goimports,
 				null_ls.builtins.formatting.markdownlint,
