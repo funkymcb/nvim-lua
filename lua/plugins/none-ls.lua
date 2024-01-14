@@ -15,6 +15,7 @@ return {
 				null_ls.builtins.formatting.yamlfmt,
 
 				-- diagnostics
+				null_ls.builtins.diagnostics.codespell,
 				null_ls.builtins.diagnostics.eslint_d,
 				null_ls.builtins.diagnostics.golangci_lint,
 				null_ls.builtins.diagnostics.jsonlint,
