@@ -24,6 +24,11 @@ vim.keymap.set("n", "<leader>Q", ":qa<CR>")
 vim.keymap.set("n", "<leader>w", ":w<CR>")
 vim.keymap.set("n", "<leader>W", ":wq<CR>")
 
+-- quickfix execute register a
+vim.keymap.set("n", "<leader>cdo", ':cdo execute "norm! @a" | update<CR>')
+vim.keymap.set("n", "<leader>cn", ":cnext<CR>")
+vim.keymap.set("n", "<leader>cp", ":cprevious<CR>")
+
 -- format json
 vim.keymap.set("n", "<leader>fj", ":%!jq .<CR>")
 

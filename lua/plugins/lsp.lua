@@ -103,10 +103,11 @@ return {
 								--    "/*.yaml",
 								--    "/*.yml"
 								-- },
-								["http://json.schemastore.org/kustomization"] = "kustomization.yaml",
+								["https://json.schemastore.org/kustomization.json"] = "kustomization.yaml",
 								-- github workflows
 								["https://json.schemastore.org/github-workflow.json"] = "/.github/workflows/*",
 								-- azure pipelines
+								["https://gitlab.com/gitlab-org/gitlab/-/raw/master/app/assets/javascripts/editor/schema/ci.json"] = ".gitlab-ci.yaml",
 								["https://dev.azure.com/finorun/_apis/distributedtask/yamlschema"] = {
 									"azure-pipelines.yaml, azure-pipelines.yml",
 								},
