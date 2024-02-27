@@ -27,7 +27,7 @@ return {
 
 		require("mason").setup({})
 		require("mason-lspconfig").setup({
-			ensure_installed = { "lua_ls", "yamlls", "tsserver", "terraformls", "templ" },
+			ensure_installed = { "lua_ls", "yamlls", "jsonls", "tsserver", "terraformls", "templ" },
 			automatic_installation = true,
 		})
 

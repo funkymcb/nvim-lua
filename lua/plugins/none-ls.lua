@@ -1,5 +1,8 @@
 return {
 	"nvimtools/none-ls.nvim",
+	dependencies = {
+		"gbprod/none-ls-shellcheck.nvim",
+	},
 	config = function()
 		local null_ls = require("null-ls")
 		local helpers = require("null-ls.helpers")
@@ -11,15 +14,11 @@ return {
 				null_ls.builtins.formatting.goimports,
 				null_ls.builtins.formatting.markdownlint,
 				null_ls.builtins.formatting.stylua,
-				null_ls.builtins.formatting.templ,
 				null_ls.builtins.formatting.yamlfmt,
 
 				-- diagnostics
 				null_ls.builtins.diagnostics.codespell,
-				null_ls.builtins.diagnostics.eslint_d,
 				null_ls.builtins.diagnostics.golangci_lint,
-				null_ls.builtins.diagnostics.jsonlint,
-				null_ls.builtins.diagnostics.shellcheck,
 				null_ls.builtins.diagnostics.terraform_validate,
 			},
 		})
@@ -63,5 +62,7 @@ return {
 		}
 
 		null_ls.register(markdownlint)
+		null_ls.register(require("none-ls-shellcheck.diagnostics"))
+		null_ls.register(require("none-ls-shellcheck.code_actions"))
 	end,
 }
