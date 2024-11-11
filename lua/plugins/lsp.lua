@@ -65,6 +65,13 @@ return {
                         end
                         return true
                     end,
+                    settings = {
+                        Lua = {
+                            diagnostics = {
+                                globals = { "vim" },
+                            },
+                        },
+                    },
                 })
             end,
 
