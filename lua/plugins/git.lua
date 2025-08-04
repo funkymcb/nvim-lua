@@ -2,6 +2,14 @@ return {
 	{
 		"lewis6991/gitsigns.nvim",
 		name = "gitsigns",
+		lazy = false,
+		keys = {
+			{
+				"<leader>gb",
+				"<cmd>Gitsigns blame<cr>",
+				desc = "Gitsigns blame",
+			}
+		},
 		opts = {
 			signs = {
 				add = { text = "+" },
@@ -14,7 +22,7 @@ return {
 				virt_text_pos = "right_align",
 				virt_text_priority = 1000,
 			},
-		},
+		}
 	},
 	{
 		"kdheepak/lazygit.nvim",
@@ -22,8 +30,12 @@ return {
 		dependencies = {
 			"nvim-lua/plenary.nvim",
 		},
-		config = function()
-			vim.keymap.set("n", "<leader>gs", ":LazyGit<CR>")
-		end,
+		keys = {
+			{
+				"<leader>gs",
+				"<cmd>LazyGit<cr>",
+				desc = "Lazygit open"
+			}
+		}
 	},
 }

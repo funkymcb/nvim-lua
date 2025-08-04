@@ -2,27 +2,35 @@ return {
 	{
 		'nvim-telescope/telescope.nvim',
 		dependencies = { 'nvim-lua/plenary.nvim' },
-		config = function()
-			local builtin = require('telescope.builtin')
-			vim.keymap.set("n", "<leader>fg", builtin.live_grep)
-			vim.keymap.set("n", "<leader>fs", builtin.grep_string)
-			vim.keymap.set("n", "<leader>ff", builtin.find_files)
-			vim.keymap.set("n", "<leader>fm", builtin.marks)
-			vim.keymap.set("n", "<leader>fb", builtin.buffers)
+		keys = {
+			{
+				"<leader>fg",
+				"<cmd>Telescope live_grep<cr>",
+				desc = "Telescope live grep"
+			},
+			{
+				"<leader>ff",
+				"<cmd>Telescope find_files<cr>",
+				desc = "Telescope find files"
+			},
+			{
+				"<leader>fs",
+				"<cmd>Telescope grep_string<cr>",
+				desc = "Telescope grep string"
+			}
+		},
+		opts = {
+			defaults = {
+				color_devicons = true,
 
-			local actions = require("telescope.actions")
-			require("telescope").setup({
-				defaults = {
-					color_devicons = true,
-
-					mappings = {
-						i = {
-							["<Tab>"] = actions.file_split, -- workaround for <c-i>
-							["<C-s>"] = actions.file_vsplit,
-						},
+				mappings = {
+					i = {
+						["<Tab>"] = require("telescope.actions").file_split, -- workaround for <c-i>
+						["<C-s>"] = require("telescope.actions").file_vsplit,
 					},
 				},
-			})
-		end,
+			},
+		}
+
 	}
 }
