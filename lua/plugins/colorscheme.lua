@@ -1,16 +1,13 @@
 return {
-	{
-		"folke/tokyonight.nvim",
-		name = "tokyo",
+	{ 
+		"catppuccin/nvim", 
+		name = "catppuccin",
+		priority = 1000,
 		config = function()
-			vim.cmd.colorscheme("tokyonight-storm")
+			require("catppuccin").setup({
+				transparent_background = true
+			})
+			vim.cmd.colorscheme "catppuccin"
 		end,
-	},
-	{
-		"xiyaowong/transparent.nvim",
-		config = function()
-			require("transparent").setup({})
-			require("transparent").clear_prefix("NeoTree")
-		end,
-	},
+	}
 }

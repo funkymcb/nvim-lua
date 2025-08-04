@@ -43,3 +43,10 @@ vim.keymap.set("v", "<leader>bd", "c<c-r>=system('base64 --decode', @\")<cr><esc
 -- move lines
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
+
+-- diagnostics
+vim.keymap.set("n", "<space>d", vim.lsp.buf.hover)
+vim.keymap.set("n", "<space>gd", vim.lsp.buf.definition)
+vim.keymap.set("n", "<space>ca", vim.lsp.buf.code_action)
+vim.keymap.set("n", "<space>n", vim.diagnostic.goto_next)
+vim.keymap.set("n", "<space>p", vim.diagnostic.goto_prev)
