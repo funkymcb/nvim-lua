@@ -25,3 +25,6 @@ vim.opt.inccommand = "nosplit"
 vim.opt.foldmethod = "manual"
 vim.opt.mouse = "a"
 
+-- disable default file dir for neotree
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1

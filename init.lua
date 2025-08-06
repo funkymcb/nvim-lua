@@ -2,5 +2,5 @@ require("options")
 require("keymaps")
 require("config.lazy")
 
-vim.lsp.enable('luals')
-vim.lsp.enable('go')
+vim.lsp.enable('lua_ls')
+vim.lsp.enable('yaml')
