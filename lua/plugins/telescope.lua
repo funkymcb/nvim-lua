@@ -25,8 +25,8 @@ return {
 
 				mappings = {
 					i = {
-						["<Tab>"] = require("telescope.actions").file_split, -- workaround for <c-i>
-						["<C-s>"] = require("telescope.actions").file_vsplit,
+						["<Tab>"] = "file_split",
+						["<C-s>"] = "file_vsplit"
 					},
 				},
 			},
