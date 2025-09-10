@@ -23,6 +23,11 @@ return {
 				["https://json.schemastore.org/kustomization.json"] = "kustomization.yaml",
 				-- github workflows
 				["https://json.schemastore.org/github-workflow.json"] = "/.github/workflows/*",
+				["https://gitlab.com/gitlab-org/gitlab/-/raw/master/app/assets/javascripts/editor/schema/ci.json"] = {
+					".gitlab-ci.*",
+					"/.gitlab-ci/*",
+					"/gitlab-ci/*"
+				},
 			},
 		},
 	}
