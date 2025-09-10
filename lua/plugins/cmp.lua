@@ -1,5 +1,4 @@
 return {
-<<<<<<< Updated upstream
 	"hrsh7th/nvim-cmp",
 	dependencies = {
 		"hrsh7th/cmp-nvim-lsp",
@@ -12,20 +11,6 @@ return {
 	config = function()
 		local cmp = require("cmp")
 		local cmp_autopairs = require("nvim-autopairs.completion.cmp")
-=======
-    "hrsh7th/nvim-cmp",
-    dependencies = {
-        "hrsh7th/cmp-nvim-lsp",
-        "hrsh7th/cmp-nvim-lua",
-        "hrsh7th/cmp-buffer",
-        "hrsh7th/cmp-path",
-        "hrsh7th/cmp-cmdline",
-		"hrsh7th/cmp-nvim-lsp-signature-help"
-    },
-    config = function()
-        local cmp = require("cmp")
-        local cmp_autopairs = require("nvim-autopairs.completion.cmp")
->>>>>>> Stashed changes
 
 		cmp.setup({
 			snippet = {
@@ -47,7 +32,6 @@ return {
 				}),
 
 				-- FIX: fix jump forward (cmp_action came from lsp-zero)
-<<<<<<< Updated upstream
 				-- navigate between luasnip placeholder
 				-- ["<C-f>"] = cmp_action.luasnip_jump_forward(),
 				-- ["<C-b>"] = cmp_action.luasnip_jump_backward(),
@@ -70,30 +54,6 @@ return {
 				{ name = "buffer" },
 			},
 		})
-=======
-                -- navigate between luasnip placeholder
-                -- ["<C-f>"] = cmp_action.luasnip_jump_forward(),
-                -- ["<C-b>"] = cmp_action.luasnip_jump_backward(),
-            }),
-            sources = cmp.config.sources({
-                { name = "nvim_lsp" },
-				{ name = 'nvim_lsp_signature_help' },
-                { name = "luasnip" },
-                { name = "path" },
-                { name = "buffer",  option = { keyword_lenth = 3 } },
-            }),
-            window = {
-                completion = cmp.config.window.bordered(),
-                documentation = cmp.config.window.bordered(),
-            },
-        })
-        cmp.setup.cmdline({ "/", "?" }, {
-            mapping = cmp.mapping.preset.cmdline(),
-            sources = {
-                { name = "buffer" },
-            },
-        })
->>>>>>> Stashed changes
 
 		cmp.setup.cmdline(":", {
 			mapping = cmp.mapping.preset.cmdline(),
