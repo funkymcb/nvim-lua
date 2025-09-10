@@ -31,7 +31,7 @@ return {
 		{
 			"<C-f>",
 			"<cmd>Neotree toggle<cr>",
-			desc = "Neotree toggle"
-		}
-	}
+			desc = "Neotree toggle",
+		},
+	},
 }

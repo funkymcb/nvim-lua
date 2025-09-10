@@ -8,8 +8,8 @@ return {
 			{
 				"<leader>ft",
 				"<cmd>TodoTelescope<cr>",
-				desc = "Todo Telescope"
-			}
-		}
-	}
+				desc = "Todo Telescope",
+			},
+		},
+	},
 }

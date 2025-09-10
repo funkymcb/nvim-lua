@@ -1,7 +1,7 @@
 return {
 	{
 		"nvim-treesitter/nvim-treesitter",
-		branch = 'master',
+		branch = "master",
 		lazy = false,
 		build = ":TSUpdate",
 		config = function()
@@ -11,5 +11,5 @@ return {
 				indent = { enable = true },
 			})
 		end,
-	}
+	},
 }

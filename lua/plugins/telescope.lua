@@ -1,23 +1,23 @@
 return {
 	{
-		'nvim-telescope/telescope.nvim',
-		dependencies = { 'nvim-lua/plenary.nvim' },
+		"nvim-telescope/telescope.nvim",
+		dependencies = { "nvim-lua/plenary.nvim" },
 		keys = {
 			{
 				"<leader>fg",
 				"<cmd>Telescope live_grep<cr>",
-				desc = "Telescope live grep"
+				desc = "Telescope live grep",
 			},
 			{
 				"<leader>ff",
 				"<cmd>Telescope find_files<cr>",
-				desc = "Telescope find files"
+				desc = "Telescope find files",
 			},
 			{
 				"<leader>fs",
 				"<cmd>Telescope grep_string<cr>",
-				desc = "Telescope grep string"
-			}
+				desc = "Telescope grep string",
+			},
 		},
 		opts = {
 			defaults = {
@@ -26,11 +26,10 @@ return {
 				mappings = {
 					i = {
 						["<Tab>"] = "file_split",
-						["<C-s>"] = "file_vsplit"
+						["<C-s>"] = "file_vsplit",
 					},
 				},
 			},
-		}
-
-	}
+		},
+	},
 }

@@ -8,7 +8,7 @@ return {
 				"<leader>gb",
 				"<cmd>Gitsigns blame<cr>",
 				desc = "Gitsigns blame",
-			}
+			},
 		},
 		opts = {
 			signs = {
@@ -22,7 +22,7 @@ return {
 				virt_text_pos = "right_align",
 				virt_text_priority = 1000,
 			},
-		}
+		},
 	},
 	{
 		"kdheepak/lazygit.nvim",
@@ -34,8 +34,8 @@ return {
 			{
 				"<leader>gs",
 				"<cmd>LazyGit<cr>",
-				desc = "Lazygit open"
-			}
-		}
+				desc = "Lazygit open",
+			},
+		},
 	},
 }

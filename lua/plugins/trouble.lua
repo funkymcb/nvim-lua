@@ -4,7 +4,7 @@ return {
 		lazy = false,
 		opts = {
 			win = {
-				position = "right"
+				position = "right",
 			},
 			modes = {
 				mydiags = {
@@ -21,8 +21,8 @@ return {
 							},
 						},
 					},
-				}
-			}
+				},
+			},
 		},
 		cmd = "Trouble",
 		keys = {
@@ -57,6 +57,5 @@ return {
 				desc = "Quickfix List (Trouble)",
 			},
 		},
-	}
+	},
 }
-
