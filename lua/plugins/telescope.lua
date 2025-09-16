@@ -14,6 +14,11 @@ return {
 				desc = "Telescope find files",
 			},
 			{
+				"<leader>fd",
+				"<cmd>Telescope lsp_document_symbols<cr>",
+				desc = "Telescope find document symbols (eg. functions)",
+			},
+			{
 				"<leader>fs",
 				"<cmd>Telescope grep_string<cr>",
 				desc = "Telescope grep string",
