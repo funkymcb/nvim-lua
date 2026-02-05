@@ -1,15 +1,17 @@
 return {
 	"hrsh7th/nvim-cmp",
 	dependencies = {
-		"hrsh7th/cmp-nvim-lsp",
-		"hrsh7th/cmp-nvim-lua",
 		"hrsh7th/cmp-buffer",
-		"hrsh7th/cmp-path",
 		"hrsh7th/cmp-cmdline",
+		"hrsh7th/cmp-nvim-lsp",
 		"hrsh7th/cmp-nvim-lsp-signature-help",
+		"hrsh7th/cmp-nvim-lua",
+		"hrsh7th/cmp-path",
+		"onsails/lspkind.nvim",
 	},
 	config = function()
 		local cmp = require("cmp")
+		local lspkind = require("lspkind")
 		local cmp_autopairs = require("nvim-autopairs.completion.cmp")
 
 		cmp.setup({
@@ -31,21 +33,42 @@ return {
 					select = true,
 				}),
 
-				-- FIX: fix jump forward (cmp_action came from lsp-zero)
-				-- navigate between luasnip placeholder
-				-- ["<C-f>"] = cmp_action.luasnip_jump_forward(),
-				-- ["<C-b>"] = cmp_action.luasnip_jump_backward(),
+				-- jump to next placeholder in snippet
+				["<C-f>"] = cmp.mapping(function(fallback)
+					if require("luasnip").jumpable(1) then
+						require("luasnip").jump(1)
+					else
+						fallback()
+					end
+				end, { "i", "s" }),
+				-- jump to previous placeholder in snippet
+				["<C-b>"] = cmp.mapping(function(fallback)
+					if require("luasnip").jumpable(-1) then
+						require("luasnip").jump(-1)
+					else
+						fallback()
+					end
+				end, { "i", "s" }),
 			}),
 			sources = cmp.config.sources({
 				{ name = "nvim_lsp" },
 				{ name = "nvim_lsp_signature_help" },
 				{ name = "luasnip" },
 				{ name = "path" },
-				{ name = "buffer", option = { keyword_lenth = 3 } },
+				{ name = "buffer", option = { keyword_length = 3 } },
 			}),
 			window = {
-				completion = cmp.config.window.bordered(),
-				documentation = cmp.config.window.bordered(),
+				completion = {
+					border = "rounded",
+					windowhighlight = "Normal:CmpPmenu,CursorLine:PmenuSel,Search:None",
+				},
+				documentation = {
+					border = "rounded",
+					windowhighlight = "Normal:CmpPmenu,CursorLine:PmenuSel,Search:None",
+				},
+			},
+			formatting = {
+				format = lspkind.cmp_format(),
 			},
 		})
 		cmp.setup.cmdline({ "/", "?" }, {
