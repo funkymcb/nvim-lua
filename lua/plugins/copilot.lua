@@ -20,15 +20,16 @@ return {
 			-- enable copilot for specific filetypes
 			vim.g.copilot_filetypes = {
 				["*"] = false,
-				["lua"] = true,
-				["python"] = true,
-				["javascript"] = true,
-				["typescript"] = true,
-				["go"] = true,
-				["rust"] = true,
-				["java"] = true,
 				["c"] = true,
 				["cpp"] = true,
+				["go"] = true,
+				["java"] = true,
+				["javascript"] = true,
+				["lua"] = true,
+				["python"] = true,
+				["rust"] = true,
+				["typescript"] = true,
+				["yaml"] = true,
 			}
 		end,
 	},
