@@ -9,6 +9,16 @@ return {
 				":Copilot panel<CR>",
 				desc = "Open Copilot Panel",
 			},
+			{
+				"<leader>ce",
+				":Copilot enable<CR>",
+				desc = "Enable Copilot",
+			},
+			{
+				"<leader>cd",
+				":Copilot disable<CR>",
+				desc = "Disable Copilot",
+			},
 		},
 		config = function()
 			vim.keymap.set("i", "<C-l>", 'copilot#Accept("<CR>")', {
