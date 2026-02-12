@@ -38,6 +38,7 @@ return {
 				["lua"] = true,
 				["python"] = true,
 				["rust"] = true,
+				["templ"] = true,
 				["typescript"] = true,
 				["yaml"] = true,
 			}
