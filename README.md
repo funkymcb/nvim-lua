@@ -86,6 +86,7 @@ Persistent undo is written to `~/.vim/undodir`.
 | [indent-blankline.nvim](https://github.com/lukas-reineke/indent-blankline.nvim) | Indent guides (grey gradient, highlighted scope) |
 | [nvim-autopairs](https://github.com/windwp/nvim-autopairs) | Auto-close brackets/quotes |
 | [todo-comments.nvim](https://github.com/folke/todo-comments.nvim) | Highlight and search TODO/FIXME comments |
+| [grug-far.nvim](https://github.com/MagicDuck/grug-far.nvim) | Project-wide (multiline) search and replace |
 
 ## Language support
 
@@ -143,6 +144,14 @@ Leader is `<Space>`.
 | `<leader>fc` | Changed files (git status) |
 
 Inside the Telescope prompt: `<Tab>` opens in a horizontal split, `<C-s>` in a vertical split.
+
+### Search and replace (grug-far)
+
+| Key | Action |
+| --- | --- |
+| `<leader>sr` | Literal, multiline search and replace in the current directory |
+
+Inside grug-far: `<Tab>` / `<S-Tab>` jump between inputs, `<localleader>r` replaces all matches, `g?` shows help.
 
 ### File tree (nvim-tree)
 
