@@ -26,6 +26,11 @@ return {
 			"<cmd>Telescope grep_string<cr>",
 			desc = "Telescope grep string",
 		},
+		{
+			"<leader>fc",
+			"<cmd>Telescope git_status<cr>",
+			desc = "Telescope find changed files (git status)",
+		},
 	},
 	opts = {
 		defaults = {

@@ -140,6 +140,7 @@ Leader is `<Space>`.
 | `<leader>fs` | Grep string under cursor |
 | `<leader>fd` | LSP document symbols |
 | `<leader>ft` | Search TODO comments |
+| `<leader>fc` | Changed files (git status) |
 
 Inside the Telescope prompt: `<Tab>` opens in a horizontal split, `<C-s>` in a vertical split.
 
