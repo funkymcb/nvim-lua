@@ -2,12 +2,9 @@ return {
 	{
 		"folke/todo-comments.nvim",
 		dependencies = { "nvim-lua/plenary.nvim" },
-		lazy = false,
+		event = { "BufReadPost", "BufNewFile" },
+		cmd = "TodoTelescope",
 		opts = {},
-		config = function()
-			require("todo-comments").setup()
-			require("telescope").load_extension("todo-comments")
-		end,
 		keys = {
 			{
 				"<leader>ft",

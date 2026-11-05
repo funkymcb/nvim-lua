@@ -61,11 +61,11 @@ return {
 			window = {
 				completion = {
 					border = "rounded",
-					windowhighlight = "Normal:CmpPmenu,CursorLine:PmenuSel,Search:None",
+					winhighlight = "Normal:CmpPmenu,CursorLine:PmenuSel,Search:None",
 				},
 				documentation = {
 					border = "rounded",
-					windowhighlight = "Normal:CmpPmenu,CursorLine:PmenuSel,Search:None",
+					winhighlight = "Normal:CmpPmenu,CursorLine:PmenuSel,Search:None",
 				},
 			},
 			formatting = {

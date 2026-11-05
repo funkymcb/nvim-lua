@@ -5,6 +5,7 @@ return {
         -- optional but recommended
         { 'nvim-telescope/telescope-fzf-native.nvim', build = 'make' },
     },
+	cmd = "Telescope",
 	keys = {
 		{
 			"<leader>fg",
@@ -43,5 +44,10 @@ return {
 				},
 			},
 		},
-	}
+	},
+	config = function(_, opts)
+		local telescope = require("telescope")
+		telescope.setup(opts)
+		telescope.load_extension("fzf")
+	end,
 }
